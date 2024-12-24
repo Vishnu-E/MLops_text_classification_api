@@ -2,55 +2,23 @@
 
 This project is part of the ML Ops course at Jio Institute. The goal of this project is to build and deploy a text classification model.
 
-## Project Structure
 
-- `data/`: Contains the dataset used for training and testing.
-- `notebooks/`: Jupyter notebooks for data exploration and model development.
-- `src/`: Source code for data preprocessing, model training, and evaluation.
-- `models/`: Saved models and related artifacts.
-- `scripts/`: Scripts for running the model and other utilities.
-- `README.md`: Project documentation.
+text_classification/
+├── app/
+│   ├── main.py # FastAPI app
+│   ├── routes.py # API routes
+├── model/
+│   ├── train.py # Model training
+│   ├── predict.py # Prediction logic
+├── requirements.txt # Dependencies
+└── README.md # Documentation
 
-## Setup
 
-1. Clone the repository:
-    ```bash
-    git clone <repository_url>
-    cd text_classification
-    ```
-
-2. Create a virtual environment and install dependencies:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    pip install -r requirements.txt
-    ```
-
-## Usage
-
-1. Preprocess the data:
-    ```bash
-    python src/preprocess.py
-    ```
-
-2. Train the model:
-    ```bash
-    python src/train.py
-    ```
-
-3. Evaluate the model:
-    ```bash
-    python src/evaluate.py
-    ```
-
-4. Run the model for predictions:
-    ```bash
-    python scripts/predict.py --input <input_text>
-    ```
 
 ## Deployment
+uvicorn app.main:app --reload
+link/doc
 
-Instructions for deploying the model will be added here.
 
 ## Contributing
 
